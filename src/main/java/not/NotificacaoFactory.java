@@ -3,7 +3,6 @@ package not;
 public class NotificacaoFactory {
     public static INotificacao obterNotificacao(String tipo) {
         try {
-            // Use o pacote completo aqui
             Class<?> classe = Class.forName("not.Notificacao" + tipo);
             Object objeto = classe.getDeclaredConstructor().newInstance();
 
